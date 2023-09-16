@@ -3,5 +3,7 @@ A contact keeper app to add new contacts , delete contacts by taking user's perm
 
 Install the json server on your editor:
 npm i --save json-server
+<br>
 Create a db.json file with some data
+<br>
 And then start your json-server
