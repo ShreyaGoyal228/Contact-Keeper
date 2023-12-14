@@ -7,12 +7,13 @@ import ContactCard from './ContactCard';
 
 const ContactList=(props)=>{     
     // console.log(props);
-    const deleteContactHandler=(id)=>{
-              props.getContactId(id);
-    }      
+    // const deleteContactHandler=(id)=>{
+    //           props.getContactId(id);
+    // }      
+    // gettingId={deleteContactHandler}
     const renderContactInfo=props.contact.map((contact)=>{
         return( 
-        <ContactCard contact={contact} gettingId={deleteContactHandler} key={contact.id}/>
+        <ContactCard contact={contact}  key={contact.id}/>
         ); 
     });
     const noMatches =()=>{

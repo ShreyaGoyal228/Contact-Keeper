@@ -26,7 +26,7 @@ const App=()=>{
 
   const addContactHandler=async(contact)=>{
     const response=await api.post('/contacts',{id:uuidv4(),...contact});  
-    //setContacts([{id: uuidv4(), ...contact},...contacts]);
+    // setContacts([{id: uuidv4(), ...contact},...contacts]);
     setContacts([...contacts,response.data]);
     console.log(contact);
   }
@@ -73,9 +73,9 @@ if(searchTerm!=="")
 } 
 //Get the contacts from JSON server on refreshing the page
 useEffect(()=>{
-    // const getContacts=JSON.parse(localStorage.getItem('contacts')); 
-    // if(getContacts!=null)
-   // setContacts(getContacts);
+  //   const getContacts=JSON.parse(localStorage.getItem('contacts')); 
+  //   if(getContacts!=null)
+  //  setContacts(getContacts);
    const getAllContacts=async()=>{
      const allContacts=await retrieveContacts();
      if(allContacts)
@@ -84,9 +84,9 @@ useEffect(()=>{
    getAllContacts();
     },[]);
 // Update the contacts in local Storage every time contacs array gets updated
-useEffect(()=>{
-  // localStorage.setItem(LOCAL_STORAGE_KEY,JSON.stringify(contacts));  //localStorage.setItem(keyname,value)
-  },[contacts]);
+// useEffect(()=>{
+//   localStorage.setItem(LOCAL_STORAGE_KEY,JSON.stringify(contacts));  //localStorage.setItem(keyname,value)
+//   },[contacts]);
 
   return ( 
   <>
